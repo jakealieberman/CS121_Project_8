@@ -25,8 +25,8 @@
      * print computer guesser
      * ask human to think of a number between 1 and 100
      * intialize low = 1, high = 100, and attempt = 1
-       * loop
-         * guess = (low + high) / 2
+       * loop called keepGoing, which keeps track of attempts
+         * guess = find mean of low + high
          * print "i guess [guess]
          * ask user too (H)igh, too (L)ow, or (C)orrect
          * if answer = C print "got it" and break
