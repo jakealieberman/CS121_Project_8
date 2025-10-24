@@ -27,6 +27,7 @@
      * intialize low = 1, high = 100, and attempt = 1
        * loop called keepGoing, which keeps track of attempts
          * guess = find mean of low + high
+         * use math.round() on guess
          * print "i guess [guess]
          * ask user too (H)igh, too (L)ow, or (C)orrect
          * if answer = C print "got it" and break
