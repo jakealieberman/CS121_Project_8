@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
+// main
+
 public class main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        playGame playGame = new playGame(input);
+        Scanner input = new Scanner(System.in); // scanner
+        playGame playGame = new playGame(input); // play game
 
-        boolean running = true;
+        boolean running = true; // main loop
         while (running) {
             int choice = gameMenu.menuChoice(input);
 
@@ -14,15 +16,11 @@ public class main {
             } else if (choice == 2) {
                 playGame.playcomputerGuesser();
             } else if (choice == 0) {
-                System.out.println("Goodbye!");
+                System.out.println("Goodbye");
                 running = false;
             } else {
                 System.out.println("Invalid");
-            }
-
-            System.out.println();
+            } // end loop
         }
-
-        input.close();
     }
-}
+} // end main

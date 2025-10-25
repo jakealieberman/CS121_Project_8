@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Random;
 
+// humanGuesser
+
 public class humanGuesser {
     private Scanner input;
     private Random rand;
@@ -12,9 +14,10 @@ public class humanGuesser {
 
     public void play() {
         System.out.println("Human Guesser");
-        int secretNumber = rand.nextInt(100) + 1;
-        int attempts = 1;
+        int secretNumber = rand.nextInt(100) + 1; // set random number
+        int attempts = 1; // set attempts
 
+        // loop until correct guess
         while (true) {
             System.out.print("Enter your guess (1-100): ");
             int guess = input.nextInt();
@@ -25,12 +28,11 @@ public class humanGuesser {
             } else if (guess > secretNumber) {
                 System.out.println("Too high!");
             } else {
-                System.out.println("Got it!");
                 System.out.println("You got it in " + attempts + " attempts.");
                 break;
-            }
+            } // end loop
 
             attempts++;
         }
     }
-}
+} // end humanGuesser

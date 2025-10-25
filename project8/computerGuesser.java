@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// computerGuesser
+
 public class computerGuesser {
     private Scanner input;
 
@@ -10,15 +12,15 @@ public class computerGuesser {
     public void play() {
         System.out.println("Computer Guesser");
         System.out.println("Think of a number between 1 and 100.");
-        System.out.println("I will try to guess it.");
-
+        
+        // set low high and attempts
         int low = 1;
         int high = 100;
         int attempts = 1;
 
-
+        // loop until correct guess
         while (low <= high) {
-
+            // computer makes a guess
             double mid = (low + high) / 2.0;
             int guess = (int)Math.round(mid);
 
@@ -27,7 +29,6 @@ public class computerGuesser {
             String reply = input.nextLine().trim();
 
             if (reply.equalsIgnoreCase("C")) {
-                System.out.println("Got it!");
                 System.out.println("I got it in " + attempts + " attempts.");
                 break;
             } else if (reply.equalsIgnoreCase("H")) {
@@ -41,8 +42,9 @@ public class computerGuesser {
 
                 continue;
             }
-
+            // end loop
             attempts++;
         }
     }
 }
+// end computerGuesser

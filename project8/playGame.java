@@ -1,7 +1,10 @@
 import java.util.Scanner;
 
-public class playGame {
+// playGame
+/* purpose of playGame is to manage the two game modes
+which are humanGuesser and computerGuesser */
 
+public class playGame {
     private Scanner input;
     private humanGuesser humanMode;
     private computerGuesser computerMode;
@@ -13,10 +16,10 @@ public class playGame {
     }
 
     public void playhumanGuesser() {
-        humanMode.play();
+        humanMode.play(); // call human moder
     }
 
     public void playcomputerGuesser() {
-        computerMode.play();
+        computerMode.play(); // call computer mode
     }
-}
+} // end playGame
